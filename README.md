@@ -65,17 +65,17 @@ The keygen used is written by [h3110w0r1d-y](https://github.com/h3110w0r1d-y/Bur
 ```bash
 # Download the official release from PortSwigger
 wget -O 'burpsuite_pro_linux.sh' 'https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.3.3&type=Linux' #provided keygen or loader is only compatible with specific versions of Burp Suite and may not function with newer releases beyond the one listed.
-chmod +x burpsuite_pro_linux.sh
+chmod +x burp-suite-patch.sh
 
 # Can also be installed as root user (for all users)
-./burpsuite_pro_linux.sh
+./burp-suite-patch.sh
 
 # Install Burp Suite Using the GUI
 
 # Download & Run the patcher
-wget -O 'burpsuite_pro_patcher_linux.sh' 'https://github.com/viphacker100/BurpSuiteInstaller/releases/latest/download/burpsuite_pro_patcher_linux_generic.sh'
-chmod +x burpsuite_pro_patcher_linux.sh
-./burpsuite_pro_patcher_linux.sh
+wget -O 'burp-suite-patch.sh' 'https://github.com/VIPHACKER100/BurpSuiteInstaller/blob/main/linux/burp-suite-patch.sh'
+chmod +x burp-suite-patch.sh
+./burp-suite-patch.sh
 
 # Follow the patcher...
 # That's it!
