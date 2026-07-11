@@ -5,7 +5,7 @@ IFS=$'\n\t'
 echo "+--------------------------------+"
 echo "|    Branded by VIPHACKER100     |"
 echo "+--------------------------------+"
-echo "[+] Burp Suite Patcher v2026.4.1"
+echo "[+] Burp Suite Patcher v2026.3.3"
 
 # Get current script path
 extract_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
