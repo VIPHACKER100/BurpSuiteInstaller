@@ -20,7 +20,7 @@
 ![Inno Setup](readme-assets/badge-inno-setup.svg)
 ![OpenJDK](https://img.shields.io/badge/OpenJDK-%23d47820.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 </br>
-[![Download Now](https://img.shields.io/badge/-Download%20Now-5b4fff?style=for-the-badge&logo=github&logoColor=black)](https://github.com/viphacker100/BurpSuiteInstaller/releases/latest)
+[![Download Now](https://img.shields.io/badge/-Download%20Now-5b4fff?style=for-the-badge&logo=github&logoColor=black)](https://portswigger.net/burp/releases/professional-community-2026-3-3)
 
 </div>
 
@@ -64,7 +64,7 @@ The keygen used is written by [h3110w0r1d-y](https://github.com/h3110w0r1d-y/Bur
 #### Download and Install
 ```bash
 # Download the official release from PortSwigger
-wget -O 'burpsuite_pro_linux.sh' 'https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.4.1&type=Linux'
+wget -O 'burpsuite_pro_linux.sh' 'https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.3.3&type=Linux' #provided keygen or loader is only compatible with specific versions of Burp Suite and may not function with newer releases beyond the one listed.
 chmod +x burpsuite_pro_linux.sh
 
 # Can also be installed as root user (for all users)
@@ -89,7 +89,7 @@ Simply download the [Latest Installer for Windows](https://github.com/viphacker1
 On the first run, you'll be required to proceed with the offline activation process.
 
 #### Using the official installer
-Download and install the [official installer from PortSwigger](https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.4.1&type=WindowsX64).
+Download and install the [official installer from PortSwigger](https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.3.3&type=WindowsX64).
 
 After the installation is complete, download and run the [patcher for Windows](https://github.com/viphacker100/BurpSuiteInstaller/releases/latest) and run it.
 
