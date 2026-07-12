@@ -24,6 +24,8 @@
 
 </div>
 
+![Proof](readme-assets/proof.png)
+
 ## Disclaimer (Legal Notice)
 This is for educational purposes only. I am not responsible for any damage caused by this software. Use at your own risk.
 
@@ -70,9 +72,9 @@ chmod +x burpsuite_pro_linux.sh
 # Install Burp Suite Using the GUI
 
 # Download & Run the patcher
-wget -O 'burpsuite_pro_patcher_linux.sh' 'https://github.com/viphacker100/BurpSuiteInstaller/releases/latest/download/burpsuite_pro_patcher_linux_generic.sh'
-chmod +x burpsuite_pro_patcher_linux.sh
-./burpsuite_pro_patcher_linux.sh
+wget -O 'burp-suite-patch.sh' 'https://github.com/viphacker100/BurpSuiteInstaller/releases/latest/download/burpsuite_pro_patcher_linux_generic.sh'
+chmod +x burp-suite-patch.sh
+./burp-suite-patch.sh
 
 # Follow the patcher...
 # That's it!
@@ -89,6 +91,8 @@ On the first run, you'll be required to proceed with the offline activation proc
 Download and install the [official installer from PortSwigger](https://portswigger-cdn.net/burp/releases/download?product=pro&version={{ burp_version }}&type=WindowsX64).
 
 After the installation is complete, download and run the [patcher for Windows](https://github.com/viphacker100/BurpSuiteInstaller/releases/latest) and run it.
+
+> **Note:** The Loader works with `burpsuite_pro.jar` directly on all versions. The official EXE installer (`BurpSuitePro.exe`) is only confirmed up to v2026.3.3 — use the JAR-based installer for newer versions.
 
 ## Utilities
 

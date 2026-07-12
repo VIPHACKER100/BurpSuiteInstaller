@@ -7,7 +7,7 @@
   </a>
 
 <h3 align="center">Burp Suite Cracked Activator (Keygen and Loader + Easy Install)</h3>
-<h3 align="center">Version 2026.3.3</h3>
+<h3 align="center">Version 2026.3.4</h3>
 <h3 align="center">Branded by VIPHACKER100</h3>
 
   <p align="center">
@@ -20,9 +20,11 @@
 ![Inno Setup](readme-assets/badge-inno-setup.svg)
 ![OpenJDK](https://img.shields.io/badge/OpenJDK-%23d47820.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 </br>
-[![Download Now](https://img.shields.io/badge/-Download%20Now-5b4fff?style=for-the-badge&logo=github&logoColor=black)](https://portswigger.net/burp/releases/professional-community-2026-3-3)
+[![Download Now](https://img.shields.io/badge/-Download%20Now-5b4fff?style=for-the-badge&logo=github&logoColor=black)](https://github.com/viphacker100/BurpSuiteInstaller/releases/latest)
 
 </div>
+
+![Proof](readme-assets/proof.png)
 
 ## Disclaimer (Legal Notice)
 This is for educational purposes only. I am not responsible for any damage caused by this software. Use at your own risk.
@@ -61,7 +63,7 @@ The keygen used is [BurpLoaderKeygen](https://github.com/h3110w0r1d-y/BurpLoader
 #### Download and Install
 ```bash
 # Download the official release from PortSwigger
-wget -O 'burpsuite_pro_linux.sh' 'https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.3.3&type=Linux'
+wget -O 'burpsuite_pro_linux.sh' 'https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.3.4&type=Linux'
 chmod +x burpsuite_pro_linux.sh
 
 # Can also be installed as root user (for all users)
@@ -70,9 +72,9 @@ chmod +x burpsuite_pro_linux.sh
 # Install Burp Suite Using the GUI
 
 # Download & Run the patcher
-wget -O 'burpsuite_pro_patcher_linux.sh' 'https://github.com/viphacker100/BurpSuiteInstaller/releases/latest/download/burpsuite_pro_patcher_linux_generic.sh'
-chmod +x burpsuite_pro_patcher_linux.sh
-./burpsuite_pro_patcher_linux.sh
+wget -O 'burp-suite-patch.sh' 'https://github.com/viphacker100/BurpSuiteInstaller/releases/latest/download/burpsuite_pro_patcher_linux_generic.sh'
+chmod +x burp-suite-patch.sh
+./burp-suite-patch.sh
 
 # Follow the patcher...
 # That's it!
@@ -86,9 +88,11 @@ Simply download the [Latest Installer for Windows](https://github.com/viphacker1
 On the first run, you'll be required to proceed with the offline activation process.
 
 #### Using the official installer
-Download and install the [official installer from PortSwigger](https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.3.3&type=WindowsX64).
+Download and install the [official installer from PortSwigger](https://portswigger-cdn.net/burp/releases/download?product=pro&version=2026.3.4&type=WindowsX64).
 
 After the installation is complete, download and run the [patcher for Windows](https://github.com/viphacker100/BurpSuiteInstaller/releases/latest) and run it.
+
+> **Note:** The Loader works with `burpsuite_pro.jar` directly on all versions. The official EXE installer (`BurpSuitePro.exe`) is only confirmed up to v2026.3.3 — use the JAR-based installer for newer versions.
 
 ## Utilities
 
