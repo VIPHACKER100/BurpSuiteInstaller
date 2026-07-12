@@ -1,4 +1,4 @@
-; Installs Burp Suite (burpsuite_pro.jar) and crack (burploader.jar) as a proper software with a proper icon, shortcut and sh$t.
+; Installs Burp Suite (burpsuite_pro.jar) and crack (Loader.jar) as a proper software with a proper icon, shortcut and sh$t.
 
 #define ApplicationName "Burp Suite Professional"
 
@@ -60,8 +60,8 @@ Source: "jdk\*"; DestDir: "{app}\jdk"; Flags: ignoreversion recursesubdirs nocom
 ; Burp Suite jar file
 Source: "{#BurpJarFile}"; DestDir: "{app}"; DestName: "burpsuite_pro.jar"; Flags: ignoreversion nocompression
 
-; Burp Loader jar file
-Source: "burploader.jar"; DestDir: "{app}"; Flags: ignoreversion
+; Burp Loader jar file (BurpLoaderKeygen)
+Source: "BurpLoaderKeygen_v1.18.jar"; DestDir: "{app}"; DestName: "Loader.jar"; Flags: ignoreversion
 
 ; Icon file
 Source: "burp-suite-professional.ico"; DestDir: "{app}"; Flags: ignoreversion
@@ -71,11 +71,11 @@ Source: "Run-Burp.bat"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
 Name: "{autoprograms}\{#ApplicationName}"; Filename: "{app}\Run-Burp.bat"; WorkingDir: "{app}"; IconFilename: "{app}\burp-suite-professional.ico"; Tasks: startmenu desktopicon
-Name: "{autoprograms}\{#ApplicationName} Keygen"; Filename: "{app}\jdk\bin\javaw.exe"; Parameters: "-jar burploader.jar"; WorkingDir: "{app}"; Tasks: startmenu
+Name: "{autoprograms}\{#ApplicationName} Loader"; Filename: "{app}\jdk\bin\javaw.exe"; Parameters: "-jar Loader.jar"; WorkingDir: "{app}"; Tasks: startmenu
 
 [Run]
 Filename: "{app}\Run-Burp.bat"; Description: "{cm:LaunchProgram,{#ApplicationName}}"; Flags: nowait postinstall skipifsilent
-Filename: "{app}\jdk\bin\javaw.exe"; Parameters: "-jar ""{app}\burploader.jar"""; Description: "{cm:LaunchProgram,Keygen}"; Flags: nowait postinstall skipifsilent
+Filename: "{app}\jdk\bin\javaw.exe"; Parameters: "-jar ""{app}\Loader.jar"""; Description: "{cm:LaunchProgram,Loader}"; Flags: nowait postinstall skipifsilent
 
 [UninstallDelete]
 Type: files; Name: "{app}\{#BurpJarFile}"

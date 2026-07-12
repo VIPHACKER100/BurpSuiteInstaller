@@ -1,5 +1,5 @@
 @echo off
-setlocal EnableDelayedExpansion 
+setlocal EnableDelayedExpansion
 cd %~dp0
 
 echo.
@@ -20,29 +20,33 @@ set /p BurpPath=Enter Path to Burp Suite installation:
 
 :FoundPath
 echo [+] Found Path: %BurpPath%
-set OptionsFile=%BurpPath%\BurpSuitePro.vmoptions
-set ActivationFilename=activation.vmoptions
 
-:: Copy Keygen/Loader
-echo [+] Copying Keygen-Loader to Path
-copy burploader.jar %BurpPath%
+:: Clean up old patching approach (activation.vmoptions / -javaagent)
+set "OptionsFile=%BurpPath%\BurpSuitePro.vmoptions"
+if exist "%BurpPath%\activation.vmoptions" (
+    echo [+] Removing old activation.vmoptions
+    del "%BurpPath%\activation.vmoptions"
+)
+if exist "%OptionsFile%" (
+    echo [+] Cleaning old -include-options from BurpSuitePro.vmoptions
+    findstr /V /C:"-include-options activation.vmoptions" "%OptionsFile%" > "%OptionsFile%.tmp"
+    move /Y "%OptionsFile%.tmp" "%OptionsFile%" >nul
+)
 
-:: Add Line to vmoptions
-set line=-include-options %ActivationFilename%
-type %OptionsFile% | findstr /C:"%line%" >nul
-if %errorlevel% neq 0 echo %line% >> %OptionsFile%
+:: Copy Loader
+echo [+] Copying Loader to Path
+copy BurpLoaderKeygen_v1.18.jar "%BurpPath%\Loader.jar"
 
-:: Create new sub-vmoptions
-echo -noverify >> %BurpPath%\%ActivationFilename%
-echo -javaagent:burploader.jar >> %BurpPath%\%ActivationFilename%
-echo --add-opens=java.base/java.lang=ALL-UNNAMED >> %BurpPath%\%ActivationFilename%
-echo --add-opens=java.desktop/javax.swing=ALL-UNNAMED >> %BurpPath%\%ActivationFilename%
-echo --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED >> %BurpPath%\%ActivationFilename%
-echo --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED >> %BurpPath%\%ActivationFilename%
-echo --add-opens=java.base/jdk.internal.org.objectweb.asm.Opcodes=ALL-UNNAMED >> %BurpPath%\%ActivationFilename%
+:: Kill any running Burp processes
+echo [+] Closing any running Burp instances
+taskkill /F /IM BurpSuitePro.exe 2>nul >nul
+taskkill /F /IM javaw.exe 2>nul >nul
 
-echo [+] Use the keygen to register the program
-start %BurpPath%\BurpSuitePro.exe
-start %BurpPath%\jre\bin\javaw.exe -jar %BurpPath%\burploader.jar
+echo [+] Launching Loader...
+echo.
+echo    In the Loader window, click "Run" to start Burp Suite.
+echo    Then follow the manual activation process between both windows.
+echo.
+start "" "%BurpPath%\jre\bin\javaw.exe" -jar "%BurpPath%\Loader.jar"
 
 echo [+] Done!

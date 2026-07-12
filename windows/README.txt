@@ -12,9 +12,10 @@ Requirements:
 
 How-To-Use:
 	1. Add your Burp Suite Professional JAR file, can be downloaded from https://portswigger.net/burp/releases 
-	2. put the file in the current folder, and ensure its name is "burpsuite_pro.jar" or follows the pattern "burpsuite_pro_vXXXX.X.X.jar" (X is placehold for burp version) {only upto v2026.3.3} 
+	2. put the file in the current folder, and ensure its name is "burpsuite_pro.jar" or follows the pattern "burpsuite_pro_vXXXX.X.X.jar" (X is placehold for burp version) 
 	3. run make-installer.bat
 
 
 TODO:
 	- Create a downloadable version, maybe one that modifies the original installler. this installer is rather heavy (~800MB)
+	- (Note: This approach uses BurpLoaderKeygen which works on Burp Suite v2026.x and above.)

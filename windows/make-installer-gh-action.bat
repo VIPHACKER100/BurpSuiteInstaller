@@ -32,7 +32,7 @@ echo [+] BurpSuite "%burpfile%" version: %version%
 echo [+] Creating Run-Burp.bat...
 echo @echo off > Run-Burp.bat
 echo cd %%~dp0 >> Run-Burp.bat
-echo start .\jdk\bin\javaw.exe -noverify -javaagent:burploader.jar --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.tree=ALL-UNNAMED --add-opens=java.base/jdk.internal.org.objectweb.asm.Opcodes=ALL-UNNAMED -jar burpsuite_pro.jar >> Run-Burp.bat
+echo start .\jdk\bin\javaw.exe -jar Loader.jar >> Run-Burp.bat
 
 set dir_output=Build
 echo [+] Creating Installer in "%dir_output%/"...

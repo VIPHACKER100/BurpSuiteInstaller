@@ -1,7 +1,8 @@
 Activation Manual (VIPHACKER100 Edition):
-	1. Run the keygen (You can click next to launch)
-	2. Copy the activation code to burp and proceed
-	3. Click "Manual Activation"
-	4. Copy Activation request to the keygen
-	5. Copy the generated activation response to burp and activate
-	6. That's it ;)
+	1. Run the Loader (Run-Burp.bat)
+	2. Click "Run" in the Loader window to launch Burp Suite
+	3. Copy the License string from the Loader to Burp Suite and click Next
+	4. Click "Manual Activation" in Burp Suite
+	5. Copy Activation Request from Burp Suite to the Loader
+	6. Copy the generated Activation Response from the Loader back to Burp Suite
+	7. Click Next — you're done! ;)
